@@ -1,0 +1,1 @@
+from FastTelethonhelper import *
