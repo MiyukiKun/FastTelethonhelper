@@ -5,10 +5,20 @@
 ## Usage:
 </br>
 
+## Installation:
+  ```
+  pip install FastTelethonhelper
+  ```
+
 ### Downloads:
-- from FastTelethon-helper import download_with_progressbar
+- Usage
+  ```
+  from FastTelethonhelper import download_with_progressbar
+  ```
 - When you need to download file, 
-- `downloaded_location = await download_with_progressbar(client, reply, message)`
+    ```
+    downloaded_location = await download_with_progressbar(client, reply, message)
+    ```
 - The function returns the download location.
 - `reply` is the message object you want the progress bar to be displayed on
 - `message` is the message object that contains the file you need to download.
@@ -17,9 +27,14 @@
 </br>
 
 ### Uploads:
-- from FastTelethon-helper import upload_with_progressbar
+- Usage
+  ```
+  from FastTelethonhelper import upload_with_progressbar
+  ```
 - When you need to upload file, 
-- `await upload_with_progressbar(client, reply, file_location, name, thumbnail)`
+  ```
+  await upload_with_progressbar(client, reply, file_location, name, thumbnail)
+  ```
 - This function returns the message object(the one in which file was sent)
 - `reply` is the message object you want the progress bar to be displayed on
 - `file_location` is where the file is located that you want to upload
@@ -32,5 +47,6 @@
 </br>
 
 # Credits
+- [MiyukiKun](https://github.com/MiyukiKun) for getting this together
 - [Loonami](https://github.com/LonamiWebs) for [telethon](https://github.com/LonamiWebs/Telethon)
 - [Tulir Asokan](https://github.com/tulir) for [mautrix-telegram](https://github.com/tulir/mautrix-telegram)
