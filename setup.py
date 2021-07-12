@@ -6,10 +6,10 @@ with open("README.md", "r") as fh:
 
 setup(
     name="FastTelethonhelper",
-    version="1.0.0",
+    version="1.0.2",
     description="Make Telethon files upload/download faster",
     packages=find_packages(),
-    install_requires=["telethon", "telethon-tgcrypto", "cryptg"],
+    install_requires=["telethon", "telethon-tgcrypto", "cryptg","pyaesni"],
     classifiers=[
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
