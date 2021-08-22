@@ -13,35 +13,42 @@
 ### Downloads:
 - Usage
   ```
-  from FastTelethonhelper import download_with_progressbar
+  from FastTelethonhelper import fast_download
   ```
 - When you need to download file, 
     ```
-    downloaded_location = await download_with_progressbar(client, reply, message)
+    downloaded_location = await fast_download(client, msg, reply, download_folder, progress_bar_function)
     ```
+    - `client` = Telegram Client(Required)
+    - `msg` = The message object which has the file to be downloaded(Required)
+    - `reply` = The message on which you want the progressbar(Optional)
+    - `download_folder` = Location where you want file to be downloaded, defaults to ./downloads/ (Optional)
+    - `progress_bar_function` = The function you want to use to display the string in progressbar, it needs to have 2 parameters done bytes and total bytes and must return a desired string, defaults to a function I wrote(Optional)
+  
+</br>
 - The function returns the download location.
-- `reply` is the message object you want the progress bar to be displayed on
-- `message` is the message object that contains the file you need to download.
-- There is a similar function without progressbar where you dont need to give `reply` object, rest is same
+
 </br>
 </br>
 
 ### Uploads:
 - Usage
   ```
-  from FastTelethonhelper import upload_with_progressbar
+  from FastTelethonhelper import fast_upload
   ```
 - When you need to upload file, 
   ```
-  await upload_with_progressbar(client, reply, file_location, name, thumbnail)
+  await fast_upload(client, file_location, reply, name, progress_bar_function)
   ```
-- This function returns the message object(the one in which file was sent)
-- `reply` is the message object you want the progress bar to be displayed on
-- `file_location` is where the file is located that you want to upload
-- `name` (optional) if you want to change the name of file you are uploading, leave as None if you dont want to change it.
-- `thumbnail`(optional) the thumbnail of the file you want to display when sending the file
-- Note* the file will be sent in same chat as the progressbar display message.
-- There is a similar function without progressbar where you  need to give `entity` of chat you want to send file to instead of `reply` object, rest is same
+  - `client` = TelegramClient(Required)
+  - `file_location` = Where the file is located(Required)
+  - `reply` = The message object you want the progressbar to appear(Optional)
+  - `name` = Name of the file you want while uploading(Optional)
+  - `progress_bar_function` = The function you want to use to display the string in progressbar, it needs to have 2 parameters done bytes and total bytes and must return a desired string, defaults to a function I wrote(Optional)
+- This function returns the file object which you can use in send_message in telethon example 
+  ``` 
+  await bot.send_message(file=<what this function returns>)
+  ```
 
 </br>
 </br>
