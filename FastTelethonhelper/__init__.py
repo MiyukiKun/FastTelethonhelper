@@ -49,8 +49,10 @@ async def fast_download(client, msg, reply = None, download_folder = None, progr
     filename = msg.file.name
     dir = "downloads/"
 
-    if not os.path.isfile(dir):
-        os.mkdir("downloads/") 
+    try:
+        os.mkdir("downloads/")
+    except:
+        pass
 
     if not filename:
         filename = (
