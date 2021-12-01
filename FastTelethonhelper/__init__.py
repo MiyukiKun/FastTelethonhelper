@@ -78,7 +78,6 @@ async def fast_download(client, msg, reply = None, download_folder = None, progr
                 location=file, 
                 out=f,
             )
-    await reply.edit("Finished downloading")
     return download_location
 
 async def fast_upload(client, file_location, reply=None, name=None, progress_bar_function = progress_bar_str):
@@ -105,5 +104,4 @@ async def fast_upload(client, file_location, reply=None, name=None, progress_bar
                 name=name,
             )
         
-    await reply.edit("Finished uploading")
     return the_file
