@@ -9,7 +9,7 @@ setup(
     version="1.0.2",
     description="Make Telethon files upload/download faster",
     packages=find_packages(),
-    install_requires=["telethon", "telethon-tgcrypto", "pyaesni"],
+    install_requires=["telethon", "telethon-tgcrypto"],
     classifiers=[
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
