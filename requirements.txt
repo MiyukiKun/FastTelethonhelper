@@ -1,3 +1,2 @@
 telethon
-telethon-tgcrypto
-pyaesni
+telethon-tgcrypo
