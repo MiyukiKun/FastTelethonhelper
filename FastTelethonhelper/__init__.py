@@ -22,9 +22,9 @@ class Timer:
 
 def progress_bar_str(done, total):
     percent = round(done/total*100, 2)
-    strin = "░░░░░░░░░░░░░░░░░░░░"
+    strin = "░░░░░░░░░░"
     strin = list(strin)
-    for i in range(round(percent)//5):
+    for i in range(round(percent)//10):
         strin[i] = "█"
     strin = "".join(strin)
     final = f"Percent: {percent}%\n{human_readable_size(done)}/{human_readable_size(total)}\n{strin}"
