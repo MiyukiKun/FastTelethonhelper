@@ -55,9 +55,7 @@ async def fast_download(client, msg, reply = None, download_folder = None, progr
         pass
 
     if not filename:
-        filename = (
-            "video_" + dt.now().isoformat("_", "seconds") + ".mp4"
-                    )
+        filename = "video.mp4"
                     
     if download_folder == None:
         download_location = dir + filename
